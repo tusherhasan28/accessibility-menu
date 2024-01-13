@@ -15,6 +15,10 @@ class Shortcode {
      * Accessibility Menu Main Shortcode
      */
     public function as_main_shortcode() {
-        
+        ?>
+            <div class="as-main" id="as-main">
+                <img src="<?php esc_html_e( AS_ASSET . '/img/man.png' ); ?>">
+            </div>
+        <?php 
     }
 }
