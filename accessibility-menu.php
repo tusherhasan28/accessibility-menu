@@ -54,7 +54,8 @@ final class Accessibility {
      * All hooks
      */
     private function hooks() {
-        
+        new App\Admin();
+        new App\Front();
     }
 
     /**
