@@ -19,3 +19,14 @@
     width: 25px;
     height: 25px;
 }
+
+/*=== Accessibility ===*/
+.as-container{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 520px;
+    height: 100vh;
+    background-color: red;
+    z-index: 1000;
+}

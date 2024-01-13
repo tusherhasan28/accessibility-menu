@@ -20,5 +20,7 @@ class Shortcode {
                 <img src="<?php esc_html_e( AS_ASSET . '/img/man.png' ); ?>">
             </div>
         <?php 
+        //include accessibility contianer
+        include_once( AS_DIR . "/views/accessibility-container.php" );
     }
 }
