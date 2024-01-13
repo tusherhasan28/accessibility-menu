@@ -22,6 +22,7 @@
 
 /*=== Accessibility ===*/
 .as-container{
+    display: none;
     position: fixed;
     top:0;
     right: 0;
@@ -48,6 +49,7 @@
     padding: 10px;
     border: 1px solid #222;
     border-radius: 50%;
+    cursor: pointer;
 }
 .as-heading-cross img{
     position: absolute;
