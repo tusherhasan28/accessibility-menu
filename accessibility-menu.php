@@ -13,6 +13,8 @@
 
 namespace Habib\Accessibility;
 
+use AppendIterator;
+
 if( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
@@ -56,6 +58,7 @@ final class Accessibility {
     private function hooks() {
         new App\Admin();
         new App\Front();
+        new App\Shortcode();
     }
 
     /**
