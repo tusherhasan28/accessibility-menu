@@ -20,9 +20,10 @@ jQuery(function($){
     /**
      * For action all menu item
      */
+    //Constrast
     $(document).on('click', '.contrast', function(){
 
-        constrastBody = $('body');
+        var constrastBody = $('body');
         var body = $('body *').not('.as-container, .as-container *');
 
         var isContrasted = constrastBody.hasClass('contrasted');
@@ -36,6 +37,7 @@ jQuery(function($){
         }
     });
 
+    //Hightlight links
     $(document).on('click', '.hightlight-links', function(){
 
         var links = $('a');
@@ -49,21 +51,7 @@ jQuery(function($){
         }
     });
 
-    // var isIncreased = false;
-    // $(document).on('click', '.bigger-text', function(){
-
-    //     if (isIncreased) {
-    //         // If font size is increased, decrease it by dividing by 2
-    //         $("body, *").css("font-size", "inherit");
-    //       } else {
-    //         // If font size is not increased, increase it by multiplying by 2
-    //         $("body, *").css("font-size", function(index, currentSize) {
-    //           return parseFloat(currentSize) * 2 + "px";
-    //         });
-    //     }
-    // });
-    // isIncreased = !isIncreased; 
-
+    //Text Spacing
     $(document).on('click', '.text-spacing', function(){
 
         textSpecingBody = $('body');
