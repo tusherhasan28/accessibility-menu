@@ -35,10 +35,10 @@ jQuery(function($){
             constrastBody.addClass('contrasted');
         }
     });
-    
+
     $(document).on('click', '.hightlight-links', function(){
 
-        var links = $('body:not(.as-container) a');
+        var links = $('a');
 
         var isHighlighted = links.hasClass('highlighted');
 
