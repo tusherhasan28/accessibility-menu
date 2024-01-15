@@ -22,16 +22,20 @@ jQuery(function($){
      */
     $(document).on('click', '.contrast', function(){
 
-        var body = $("body *").not(".as-container");
+        constrastBody = $('body');
+        var body = $('body *').not('.as-container, .as-container *');
 
-        var isContrasted = body.hasClass('contrasted');
+        var isContrasted = constrastBody.hasClass('contrasted');
 
-        if (isContrasted) {
-            body.css({"background-color": "", "color": ""}).removeClass('contrasted');
+        if (isContrasted) { 
+            body.css({"background-color": "", "color": ""});
+            constrastBody.removeClass('contrasted');
         } else {
-            body.css({"background-color": "black", "color": "blue"}).addClass('contrasted');
+            body.css({"background-color": "black", "color": "blue"});
+            constrastBody.addClass('contrasted');
         }
     });
+    
     $(document).on('click', '.hightlight-links', function(){
 
         var links = $('body:not(.as-container) a');
