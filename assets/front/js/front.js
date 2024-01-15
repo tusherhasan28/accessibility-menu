@@ -61,4 +61,19 @@ jQuery(function($){
         }
     });
     isIncreased = !isIncreased; 
+
+    $(document).on('click', '.text-spacing', function(){
+
+        var body = $('body');
+
+        var isTextSpacing = body.hasClass('textSpacing');
+
+        if (isTextSpacing) {
+            $("p, h1, h2, h3, h4, h5, h6, span, div").css('letter-spacing', '');
+        } else {
+            $("p, h1, h2, h3, h4, h5, h6, span, div").css('letter-spacing', '3px');
+            body.addClass('textSpacing');
+        }
+        
+    });
 });
