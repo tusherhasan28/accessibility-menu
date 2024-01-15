@@ -41,6 +41,7 @@
     margin: 0;
     line-height: 1.2;
     font-size: 18px;
+    letter-spacing: 1px !important;
 }
 .as-heading-cross{
     position: relative;
@@ -102,4 +103,5 @@
     margin: 0;
     color: #222;
     font-weight: bold;
+    letter-spacing: 1px !important;
 }
