@@ -46,4 +46,19 @@ jQuery(function($){
             links.css({"background-color": "black", "color": "yellow"}).addClass('highlighted');
         }
     });
+
+    var isIncreased = false;
+    $(document).on('click', '.bigger-text', function(){
+
+        if (isIncreased) {
+            // If font size is increased, decrease it by dividing by 2
+            $("body, *").css("font-size", "inherit");
+          } else {
+            // If font size is not increased, increase it by multiplying by 2
+            $("body, *").css("font-size", function(index, currentSize) {
+              return parseFloat(currentSize) * 2 + "px";
+            });
+        }
+    });
+    isIncreased = !isIncreased; 
 });

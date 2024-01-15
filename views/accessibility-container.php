@@ -20,7 +20,7 @@
             <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
             <p><?php esc_html_e( 'Highlight Links', 'accessibility' ) ?> </p>
         </div>
-        <div class="as-single-item">
+        <div class="as-single-item bigger-text">
             <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
             <p><?php esc_html_e( 'Bigger Text', 'accessibility' ) ?> </p>
         </div>
