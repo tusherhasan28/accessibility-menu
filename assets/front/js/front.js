@@ -16,7 +16,23 @@ jQuery(function($){
         $(this).toggleClass('active');
     });
 
+    
+    /**
+     * For action all menu item
+     */
+    $(document).on('click', '.contrast', function(){
+        $('body').css({"background-color": "black", "color": "yellow"});
+    });
     $(document).on('click', '.hightlight-links', function(){
-        $('a').css({"background-color": "black", "color": "yellow"});
+
+        var links = $('a');
+
+        var isHighlighted = links.hasClass('highlighted');
+
+        if (isHighlighted) {
+            links.css({"background-color": "", "color": ""}).removeClass('highlighted');
+        } else {
+            links.css({"background-color": "black", "color": "yellow"}).addClass('highlighted');
+        }
     });
 });
