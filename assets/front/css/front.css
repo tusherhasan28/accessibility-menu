@@ -72,6 +72,7 @@
     padding: 25px;
 }
 .as-single-item{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,9 +82,20 @@
     background-color: #fff;
     border-radius: 10px; 
 }
+.active{
+    border: 1px solid #222;
+    box-shadow: 0 0 0 5px rgba(0,0,0,.22);
+}
 .as-single-item img{
     width: 20px;
     height: 20px;
+}
+.as-single-item svg{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
 }
 .as-single-item p{
     color:red;

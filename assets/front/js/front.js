@@ -8,4 +8,15 @@ jQuery(function($){
     $(document).on('click', '#as-cross', function(){
         $('#as-container').hide();
     });
+
+    /**
+     * Click Single Item
+     */
+    $(document).on('click', '.as-single-item', function(){
+        $(this).toggleClass('active');
+    });
+
+    $(document).on('click', '.hightlight-links', function(){
+        $('a').css({"background-color": "black", "color": "yellow"});
+    });
 });

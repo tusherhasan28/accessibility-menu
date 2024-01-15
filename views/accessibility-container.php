@@ -16,7 +16,7 @@
             <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
             <p><?php esc_html_e( 'Smart contrast', 'accessibility' ) ?> </p>
         </div>
-        <div class="as-single-item">
+        <div class="as-single-item hightlight-links">
             <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
             <p><?php esc_html_e( 'Highlight Links', 'accessibility' ) ?> </p>
         </div>
