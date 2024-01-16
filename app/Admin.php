@@ -30,9 +30,7 @@ class Admin {
      * Accessibility Menu callback function 
     */
     public function admin_page_content() {
-        ?>
-            
-        <?php
+        include_once( AS_DIR . "/views/setting/accessibility-setting.php" );
     }
 
 }
