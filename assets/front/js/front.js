@@ -20,17 +20,18 @@ jQuery(function($){
      * For action all menu item
      */
     //Constrast
+    var columns = $(".as-column");
+    var body = $('body *').not('.as-container, .as-container *, #wpadminbar *');
     $(document).on('click', '.contrast', function(){
-      let constrastBody = $('body');
-      let body = $('body *').not('.as-container, .as-container *');
+      var constrastBody = $('body');
   
-      let isContrasted = constrastBody.hasClass('contrasted');
+      var isContrasted = constrastBody.hasClass('contrasted');
   
       if(isContrasted){
         body.css({'background-color': '', color: ''});
         constrastBody.removeClass('contrasted');
       } else{
-        body.css({'background-color': 'black', color: 'blue'});
+        body.css({'background-color': '#000000', color: 'blue'});
         constrastBody.addClass('contrasted');
       }
     });
