@@ -9,6 +9,16 @@ class Admin {
      */
     public function __construct() {
         add_action( 'admin_menu', [$this, 'admin_menu'] );
+        add_action( 'admin_enqueue_scripts', [$this, 'enqueue_script'] );
+    }
+
+    /**
+     * Load all admin assets
+     */
+    public function enqueue_script() {
+        wp_enqueue_style( 'admin', AS_ASSET . '/admin/css/admin.css', '', time(), 'all' );
+
+        wp_enqueue_script( 'admin', AS_ASSET . '/admin/js/admin.js', ['jquery'], time(), true );
     }
 
     /**
