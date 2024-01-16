@@ -11,6 +11,11 @@
         <div class="as-single-item contrast">
             <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
             <p><?php esc_html_e( 'Contrast +', 'accessibility' ) ?> </p>
+            <div class="as-columns">
+                <span class="as-column as-c-active"></span>
+                <span class="as-column"></span>
+                <span class="as-column"></span>
+            </div>
         </div>
         <div class="as-single-item smart-contrast">
             <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">

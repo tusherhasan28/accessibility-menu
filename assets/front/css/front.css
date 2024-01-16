@@ -110,3 +110,18 @@
 .biggerCursorCss {
     cursor: url(../../img/cursor.png), auto !important;
 }
+.as-columns{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.as-column{
+    width: 30px;
+    height: 3px;
+    background-color: #ddd;
+    margin: 2px;
+}
+.as-c-active{
+    background-color: #222;
+}
