@@ -20,9 +20,9 @@ jQuery(function($){
      * For action all menu item
      */
     //Constrast
-    var columns = $(".as-column");
     var body = $('body *').not('.as-container, .as-container *, #wpadminbar *');
     $(document).on('click', '.contrast', function(){
+
       var constrastBody = $('body');
   
       var isContrasted = constrastBody.hasClass('contrasted');
@@ -38,27 +38,23 @@ jQuery(function($){
   
     //Hightlight links
     $(document).on('click', '.hightlight-links', function(){
-      let links = $('a');
+      var links = $('a').not('.as-container, .as-container *, #wpadminbar *');
   
-      let isHighlighted = links.hasClass('highlighted');
+      var isHighlighted = links.hasClass('highlighted');
   
       if(isHighlighted){
-        links
-          .css({'background-color': '', color: ''})
-          .removeClass('highlighted');
+        links.css({'background-color': '', color: ''}).removeClass('highlighted');
       }else{
-        links
-          .css({'background-color': 'black', color: 'yellow'})
-          .addClass('highlighted');
+        links.css({'background-color': 'black', color: 'yellow'}).addClass('highlighted');
       }
     });
   
     //Text Spacing
     $(document).on('click', '.text-spacing', function(){
-      let textSpecingBody = $('body');
-      let body = $('body *').not('.as-container, .as-container *');
+      var textSpecingBody = $('body');
+      var body = $('body *').not('.as-container, .as-container *, #wpadminbar *');
   
-      let isTextSpacing = textSpecingBody.hasClass('textSpacing');
+      var isTextSpacing = textSpecingBody.hasClass('textSpacing');
   
       if(isTextSpacing){
         body.css('letter-spacing', '');
@@ -71,10 +67,10 @@ jQuery(function($){
   
     //Bigger Text
     $(document).on('click', '.biggerText', function(){
-      let biggerTextTag = $('p , h1');
-      let body = $('body *').not('.as-container, .as-container *');
+      var biggerTextTag = $('body');
+      var body = $('body *').not('.as-container, .as-container *, #wpadminbar *');;
   
-      let isBiggerText = biggerTextTag.hasClass('biggerText');
+      var isBiggerText = biggerTextTag.hasClass('biggerText');
   
       if(isBiggerText){
         body.css('font-size', '');
@@ -87,10 +83,9 @@ jQuery(function($){
   
     //Hide Image
     $(document).on('click', '.hideImages', function(){
-      let imgTag = $('img');
-      let body = $('body *').not('.as-container, .as-container *');
+      var imgTag = $('img').not('.as-container, .as-container *, #wpadminbar *');
   
-      let isHideImage = imgTag.hasClass('hideImages');
+      var isHideImage = imgTag.hasClass('hideImages');
   
       if(isHideImage){
         imgTag.css('visibility', 'visible');
@@ -114,4 +109,21 @@ jQuery(function($){
         body.addClass('biggerCursor');
       }
     });
+
+    //Line Height
+    $(document).on('click', '.lineHeight', function(){
+      var textSpecingBody = $('body');
+      var body = $('body *').not('.as-container, .as-container *, #wpadminbar *');
+  
+      var isLineHeight = textSpecingBody.hasClass('LineHeight');
+  
+      if(isLineHeight){
+        body.css('line-height', '1.3');
+        textSpecingBody.removeClass('LineHeight');
+      }else{
+        body.css('line-height', '1.8');
+        textSpecingBody.addClass('LineHeight');
+      }
+    });
+
   });
