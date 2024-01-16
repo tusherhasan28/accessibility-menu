@@ -20,6 +20,33 @@ jQuery(function($){
      * For action all menu item
      */
     //Constrast
+    // $(".as-single-item.contrast").on("click", ".as-column", function () {
+    //     console.log("clicked");
+    //     $(".as-column").removeClass("as-c-active");
+        
+    //     // Add as-c-active class to the clicked span
+    //     $(this).addClass("as-c-active");
+    // });
+
+    $(".as-single-item.contrast").on("click", function () {
+        var $columns = $(this).find(".as-columns");
+        console.log($columns);
+        var $activeSpan = $columns.find(".as-c-active");
+    
+        if ($activeSpan.length > 0) {
+            var $nextSpan = $activeSpan.next(".as-column");
+            if ($nextSpan.length > 0) {
+                $activeSpan.removeClass("as-c-active");
+                $nextSpan.addClass("as-c-active");
+            } else {
+                $columns.find(".as-column").removeClass("as-c-active");
+            }
+        } else {
+            $columns.find(".as-column:first").addClass("as-c-active");
+        }
+    });
+    
+
     var columns = $(".as-column");
     var body = $('body *').not('.as-container, .as-container *, #wpadminbar *');
     $(document).on('click', '.contrast', function(){
