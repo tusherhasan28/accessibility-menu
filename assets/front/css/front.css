@@ -72,7 +72,7 @@
     border-radius: 20px 20px 0 0;
     background-color: #e9e9e9 !important;
     width: 100%;
-    height: 90vh;
+    /* height: 90vh; */
     padding: 25px;
 }
 .as-single-item{
@@ -127,4 +127,10 @@
 }
 .as-c-active{
     background-color: #222;
+}
+.as-button {
+    margin-top: 25px;
+}
+.as-columns.visible {
+    display: inline-block;
 }
