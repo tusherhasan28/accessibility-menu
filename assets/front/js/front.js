@@ -9,6 +9,10 @@ jQuery(function($){
     $('#as-container').hide();
   });
   
+  /**
+   * Adding Control Bar / below button
+   */
+
   $(".as-columns").css("display", "none");
 
   function handleItemClick($element, className) {
@@ -32,7 +36,10 @@ jQuery(function($){
         $columns.css("display", "");
     }
   }
-
+  /**
+   * kicking off the function 
+   */
+  
   $(".as-single-item.contrast").on("click", function () {
       handleItemClick($(this), "contrast");
   });
@@ -44,7 +51,7 @@ jQuery(function($){
   $(".as-single-item.textAlign").on("click", function () {
       handleItemClick($(this), "textAlign");
   });
-  
+
   var columns = $(".as-column");
   var body = $('body *').not('.as-container, .as-container *, #wpadminbar *');
   $(document).on('click', '.contrast', function(){
