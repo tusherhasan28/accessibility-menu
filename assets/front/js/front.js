@@ -151,19 +151,22 @@ jQuery(function ($) {
     }
   });
 
-  /**
-   * Reset all accessibility settings
-   */
   function resetAccessibilitySettings() {
-    $('.as-single-item').removeClass('active');
-    $('.as-columns').css('display', 'none');
-
     // Reset individual settings if needed
     body.css({ 'background-color': '', color: '' });
     body.css('font-size', '');
     body.css('letter-spacing', '');
+    
+    // Reset the active state of .as-single-item elements
+    $('.as-single-item').each(function () {
+      var element = $(this);
+      element.removeClass('active');
+      var columns = element.find('.as-columns');
+      columns.css('display', 'none');
+      columns.find('.as-column').removeClass('as-c-active');
+    });
   }
-
+  
   // Reset button click event
   $(document).on('click', '.as-button button', function () {
     resetAccessibilitySettings();
