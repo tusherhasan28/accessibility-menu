@@ -14,28 +14,32 @@ jQuery(function ($) {
    */
 
   $('.as-columns').css('display', 'none');
+  var count = 1;
 
-  function handleItemClick($element, className) {
-    var $columns = $element.find('.as-columns');
-    var $activeSpan = $columns.find('.as-c-active');
+  function handleItemClick(element, className) {
+    var columns = element.find('.as-columns');
+    var activeSpan = columns.find('.as-c-active');
 
-    if ($activeSpan.length > 0) {
-      var $nextSpan = $activeSpan.next('.as-column');
-
-      if ($nextSpan.length > 0) {
-        $activeSpan.removeClass('as-c-active');
-        $nextSpan.addClass('as-c-active');
+    if (activeSpan.length > 0) {
+      var nextSpan = activeSpan.next('.as-column');
+      if (nextSpan.length > 0) {
+        count++;
+        activeSpan.removeClass('as-c-active');
+        nextSpan.addClass('as-c-active');
+        console.log(`tab ${count} is clicked`);
       } else {
-        $columns.find('.as-column').removeClass('as-c-active');
-        $columns.css('display', 'none');
-        $element.removeClass('active');
+        columns.find('.as-column').removeClass('as-c-active');
+        columns.css('display', 'none');
+        element.removeClass('active');
       }
     } else {
-      $columns.find('.as-column:first').addClass('as-c-active');
-      $element.addClass('active');
-      $columns.css('display', '');
+      columns.find('.as-column:first').addClass('as-c-active');
+      element.addClass('active');
+      columns.css('display', '');
+      console.log('tab 1 is clicked');
     }
   }
+
   /**
    * kicking off the function
    */
@@ -54,9 +58,9 @@ jQuery(function ($) {
 
   var columns = $('.as-column');
   var body = $('body *').not('.as-container, .as-container *, #wpadminbar *');
+
   $(document).on('click', '.contrast', function () {
     var constrastBody = $('body');
-
     var isContrasted = constrastBody.hasClass('contrasted');
 
     if (isContrasted) {
@@ -164,6 +168,4 @@ jQuery(function ($) {
   $(document).on('click', '.as-button button', function () {
     resetAccessibilitySettings();
   });
-
-  // Individual setting click events...
 });
