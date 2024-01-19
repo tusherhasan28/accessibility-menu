@@ -1,4 +1,5 @@
 jQuery(function ($) {
+  console.log(LOCALIZED_ARR);
   /**
    * Show and hide Accessibility
    */
@@ -14,11 +15,18 @@ jQuery(function ($) {
    */
 
   $('.as-columns').css('display', 'none');
-  var count = 1;
 
   function handleItemClick(element, className) {
     var columns = element.find('.as-columns');
     var activeSpan = columns.find('.as-c-active');
+    var count = 1;
+    
+    if (className === 'contrast') {
+      var img = element.find('img');
+      if (img.length > 0) {
+        img.attr('src', LOCALIZED_ARR.iconSrc.contrast ); 
+      }
+    }
 
     if (activeSpan.length > 0) {
       var nextSpan = activeSpan.next('.as-column');
@@ -27,6 +35,14 @@ jQuery(function ($) {
         activeSpan.removeClass('as-c-active');
         nextSpan.addClass('as-c-active');
         console.log(`tab ${count} is clicked`);
+
+        if (className === 'contrast') {
+          var img = element.find('img');
+          if (img.length > 0) {
+            img.attr('src', LOCALIZED_ARR.iconSrc.light_contrast ); 
+          }
+        }
+
       } else {
         columns.find('.as-column').removeClass('as-c-active');
         columns.css('display', 'none');
@@ -37,6 +53,13 @@ jQuery(function ($) {
       element.addClass('active');
       columns.css('display', '');
       console.log('tab 1 is clicked');
+
+      if (className === 'contrast') {
+        var img = element.find('img');
+        if (img.length > 0) {
+          img.attr('src', LOCALIZED_ARR.iconSrc.dark_contrast ); 
+        }
+      }
     }
   }
 
