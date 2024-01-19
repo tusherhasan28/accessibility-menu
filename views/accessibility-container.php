@@ -17,15 +17,15 @@
             </div>
         </div>
         <div class="as-single-item smart-contrast">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/smart_contrast.svg' ); ?>">
             <p><?php esc_html_e( 'Smart contrast', 'accessibility' ) ?> </p>
         </div>
         <div class="as-single-item hightlight-links">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/highlight_link.svg' ); ?>">
             <p><?php esc_html_e( 'Highlight Links', 'accessibility' ) ?> </p>
         </div>
         <div class="as-single-item biggerText">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/bigger_text.svg' ); ?>">
             <p><?php esc_html_e( 'Bigger Text +', 'accessibility' ) ?> </p>
             <div class="as-columns">
                 <span class="as-column"></span>
@@ -34,27 +34,27 @@
             </div>
         </div>
         <div class="as-single-item text-spacing">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/text_spacing.svg' ); ?>">
             <p><?php esc_html_e( 'Text Spacing', 'accessibility' ) ?> </p>
         </div>
         <div class="as-single-item hideImages">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/hide_image.svg' ); ?>">
             <p><?php esc_html_e( 'Hide images', 'accessibility' ) ?> </p>
         </div>
         <div class="as-single-item ">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/fonts.svg' ); ?>">
             <p><?php esc_html_e( 'Fonts', 'accessibility' ) ?> </p>
         </div>
         <div class="as-single-item biggerCursor">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/bigger_cursor.svg' ); ?>">
             <p><?php esc_html_e( 'Bigger cursor', 'accessibility' ) ?> </p>
         </div>
         <div class="as-single-item">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/line_height.svg' ); ?>">
             <p><?php esc_html_e( 'Line Height', 'accessibility' ) ?> </p>
         </div>
         <div class="as-single-item textAlign">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/align.svg' ); ?>">
             <p><?php esc_html_e( 'Text Align +', 'accessibility' ) ?> </p>
             <div class="as-columns">
                 <span class="as-column"></span>
@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="as-single-item saturation">
-            <img src="<?php esc_html_e( AS_ASSET . '/img/download.svg' ); ?>">
+            <img src="<?php esc_html_e( AS_ASSET . '/img/saturation.svg' ); ?>">
             <p><?php esc_html_e( 'Saturation', 'accessibility' ) ?> </p>
         </div>
         <div class="as-single-item">
